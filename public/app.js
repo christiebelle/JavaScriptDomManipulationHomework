@@ -53,13 +53,14 @@ var appendElements = function(ul, li1, li2, li3){
 };
 
 var addNewCat = function(catName, favouriteFood, catImage) {
-  var ul = createul();
+  var ul = createUl();
   var li1 = createli1(catName);
   var li2 = createli2(favouriteFood);
   var li3 = createli3(catImage);
   appendElements(ul, li1, li2, li3);
 };
 
+addNewCat("Name: Rumpleteaser", "Favourite food: Beef", 'https://vignette.wikia.nocookie.net/jelliclecats/images/a/a0/Rumpleteazer_2.png/revision/latest?cb=20100531211334');
 };
 
 window.onload = app;
