@@ -19,6 +19,47 @@ const app = function(){
   let cats = document.querySelector("#cats");
   cats.appendChild(ul);
   debugger;
+
+  var createUl = function(){
+  let ul = document.createElement("ul");
+  ul.classList.add("cat");
+  return ul;
+};
+
+var createli1 = function(catName){
+  let li1 = document.createElement("li");
+  li1.innerText = catName;
+  return li1;
+};
+
+var createli2 = function(favouriteFood){
+  let li2 = document.createElement("li");
+  li2.innerText = favouriteFood;
+  return li2;
+};
+
+var createli3 = function(catImage){
+  let li3 = document.createElement("li");
+  li3.innerHTML = "<img width='500' src= catImage >"
+  return li3;
+};
+
+var appendElements = function(ul, li1, li2, li3){
+  ul.appendChild(li1);
+  ul.appendChild(li2);
+  ul.appendChild(li3);
+  let cats = document.querySelector("#cats");
+  cats.appendChild(ul);
+};
+
+var addNewCat = function(catName, favouriteFood, catImage) {
+  var ul = createul();
+  var li1 = createli1(catName);
+  var li2 = createli2(favouriteFood);
+  var li3 = createli3(catImage);
+  appendElements(ul, li1, li2, li3);
+};
+
 };
 
 window.onload = app;
