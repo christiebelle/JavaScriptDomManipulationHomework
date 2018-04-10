@@ -44,6 +44,14 @@ var createli3 = function(catImage){
   return li3;
 };
 
+var createImage = function(catImage){
+  let li3 = document.createElement('li');
+  let img = document.createElement('img');
+  img.src = catImage;
+  li3.appendChild('img');
+  return li3;
+};
+
 var appendElements = function(ul, li1, li2, li3){
   ul.appendChild(li1);
   ul.appendChild(li2);
